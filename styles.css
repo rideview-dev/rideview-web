@@ -90,11 +90,12 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
 .site-header{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--color-bg) 72%, transparent);border-bottom:1px solid transparent;transition:border-color .3s, background .3s}
 .site-header.scrolled{border-color:var(--color-border);background:color-mix(in srgb,var(--color-bg) 90%, transparent)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:4.75rem;gap:var(--space-6)}
-.logo{display:flex;align-items:center;gap:.55rem;font-family:var(--font-display);font-weight:700}
-.logo-mark{width:34px;height:34px;color:var(--color-text)}
-.logo-type{font-size:1.25rem;letter-spacing:-.02em}
-.logo-accent{color:var(--brand)}
-[data-theme="dark"] .logo-accent{color:var(--brand-2)}
+.logo{display:flex;align-items:center}
+.logo-img{height:34px;width:auto;display:block;border-radius:8px}
+.logo-img--dark{display:block}
+.logo-img--light{display:none}
+[data-theme="light"] .logo-img--dark{display:none}
+[data-theme="light"] .logo-img--light{display:block}
 .nav{display:flex;gap:var(--space-6);font-size:var(--text-sm);font-weight:500}
 .nav a{position:relative;color:var(--color-text-muted);padding-block:.35rem}
 .nav a:hover{color:var(--color-text)}
