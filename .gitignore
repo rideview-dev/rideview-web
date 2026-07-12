@@ -1,0 +1,8 @@
+node_modules
+qa-*.png
+.DS_Store
+server/node_modules
+server/.env
+server/data
+*.log
+*.jsonl
