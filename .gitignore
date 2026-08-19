@@ -6,3 +6,4 @@ server/.env
 server/data
 *.log
 *.jsonl
+_to_delete/

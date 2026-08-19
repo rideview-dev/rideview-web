@@ -89,6 +89,9 @@
   // Apply default language on load.
   setLanguage(DEFAULT);
   window.setLanguage = setLanguage; // expose for QA
+  // Resolve a key in the active language (used by the partner form for its
+  // status messages, so they follow the language switcher like everything else).
+  window.translate = function (key) { return resolve(current, key); };
 })();
 
 // Theme toggle (defaults to dark — the brand mode)
@@ -189,12 +192,45 @@
   const msg = document.getElementById('formMsg');
   if (!form || !msg) return;
 
-  // API base URL.
-  //  - Preview/sandbox: the placeholder below is swapped for the proxy path at deploy time.
-  //  - Local dev: falls back to http://localhost:8000.
-  //  - Production: your team replaces this with your real API origin, e.g. 'https://api.rideview.ca'.
+  // API base URL. Resolved in this order:
+  //   1. If the deploy step substituted a real origin for the placeholder, use it
+  //      (e.g. 'https://api.rideview.ca').
+  //   2. Otherwise use the SAME ORIGIN the page was served from. This is the
+  //      normal production setup: server/server.js serves this site and the API
+  //      together, so '' resolves to '/api/contact' on whatever host you deploy to.
+  //      Same-origin also means no CORS and no mixed-content blocking.
+  //   3. Only fall back to localhost:8000 when the page is clearly NOT being
+  //      served by the API — opened from disk, or from a static dev server.
   const RAW = '__PORT_8000__';
-  const API = RAW.startsWith('__') ? 'http://localhost:8000' : RAW;
+  const API = (function () {
+    if (!RAW.startsWith('__')) return RAW.replace(/\/+$/, '');
+    var loc = window.location;
+    if (loc.protocol === 'file:') return 'http://localhost:8000';
+    var isLocalHost = loc.hostname === 'localhost' || loc.hostname === '127.0.0.1';
+    // Ports commonly used by static dev servers (Live Server, Vite, http.server…).
+    var STATIC_DEV_PORTS = ['3000', '4173', '5000', '5173', '5500', '8080'];
+    if (isLocalHost && STATIC_DEV_PORTS.indexOf(loc.port) !== -1) {
+      return 'http://' + loc.hostname + ':8000';
+    }
+    return ''; // same origin
+  })();
+
+  // Status messages are shown by translation key so that (a) a stale error can
+  // never survive into a later success, and (b) the message follows the language
+  // switcher. Errors sent by the server have no key, so they clear the attribute.
+  function showKeyed(key, isError) {
+    msg.setAttribute('data-i18n', key);
+    var text = window.translate ? window.translate(key) : null;
+    if (text != null) msg.textContent = text;
+    msg.classList.toggle('is-error', !!isError);
+    msg.hidden = false;
+  }
+  function showRaw(text) {
+    msg.removeAttribute('data-i18n');
+    msg.textContent = text;
+    msg.classList.add('is-error');
+    msg.hidden = false;
+  }
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -204,10 +240,14 @@
       name: form.name.value,
       email: form.email.value,
       company: form.company.value,
+      // So the confirmation email reaches the visitor in the language they
+      // actually read the site in. The server validates this against its own
+      // list and falls back to English.
+      lang: document.documentElement.getAttribute('lang') || 'en',
       _gotcha: form._gotcha.value
     };
     btn.disabled = true;
-    btn.textContent = 'Sending…';
+    btn.textContent = window.translate ? (window.translate('cta.sending') || 'Sending…') : 'Sending…';
     msg.hidden = true;
     try {
       const res = await fetch(API + '/api/contact', {
@@ -218,17 +258,18 @@
       const body = await res.json().catch(() => ({}));
       if (res.ok && body.ok) {
         form.reset();
-        msg.hidden = false;
-        msg.style.color = '';
+        showKeyed('cta.success', false);
       } else {
-        throw new Error(body.error || 'Submission failed');
+        const err = new Error(body.error || '');
+        err.fromServer = Boolean(body.error);
+        throw err;
       }
     } catch (err) {
-      msg.hidden = false;
-      msg.style.color = '#e9576b';
-      msg.textContent = (err && err.message && err.message !== 'Submission failed')
-        ? err.message
-        : 'Something went wrong. Please email us directly at support@rideview.ca.';
+      // A message from the server (validation, rate limit) is shown as-is;
+      // anything else — network failure, CORS, server down — gets the generic
+      // localized fallback pointing at our inbox.
+      if (err && err.fromServer && err.message) showRaw(err.message);
+      else showKeyed('cta.error', true);
     } finally {
       btn.disabled = false;
       btn.textContent = original;

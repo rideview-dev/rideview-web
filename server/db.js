@@ -1,5 +1,5 @@
 /**
- * Ride View — PostgreSQL data layer
+ * RideView — PostgreSQL data layer
  * ------------------------------------------------------------
  * One place that talks to the database. Exposes:
  *   - initDb()            : connect + create the table if it doesn't exist
@@ -43,6 +43,7 @@ const CREATE_TABLE_SQL = `
     name        TEXT        NOT NULL,
     email       TEXT        NOT NULL,
     company     TEXT,
+    lang        TEXT,
     ip          TEXT,
     user_agent  TEXT
   );
@@ -52,21 +53,29 @@ const CREATE_TABLE_SQL = `
     ON submissions (email);
 `;
 
+// Additive migrations for tables created by an earlier version. Each must be
+// safe to run on every startup — CREATE TABLE IF NOT EXISTS above does nothing
+// once the table exists, so new columns have to be added explicitly.
+const MIGRATE_SQL = `
+  ALTER TABLE submissions ADD COLUMN IF NOT EXISTS lang TEXT;
+`;
+
 // Connect and make sure the schema exists. Call once at startup.
 async function initDb() {
   // A quick query both verifies connectivity and creates the table/indexes.
   await pool.query(CREATE_TABLE_SQL);
+  await pool.query(MIGRATE_SQL);
 }
 
 // Store one lead. Parameterized query — no string interpolation, so this is
 // safe from SQL injection. Returns the inserted row (incl. id + received_at).
-async function insertSubmission({ name, email, company, ip, userAgent }) {
+async function insertSubmission({ name, email, company, lang, ip, userAgent }) {
   const sql = `
-    INSERT INTO submissions (name, email, company, ip, user_agent)
-    VALUES ($1, $2, $3, $4, $5)
-    RETURNING id, received_at, name, email, company, ip, user_agent
+    INSERT INTO submissions (name, email, company, lang, ip, user_agent)
+    VALUES ($1, $2, $3, $4, $5, $6)
+    RETURNING id, received_at, name, email, company, lang, ip, user_agent
   `;
-  const params = [name, email, company || null, ip || null, userAgent || null];
+  const params = [name, email, company || null, lang || null, ip || null, userAgent || null];
   const { rows } = await pool.query(sql, params);
   return rows[0];
 }
@@ -74,7 +83,7 @@ async function insertSubmission({ name, email, company, ip, userAgent }) {
 // Read recent leads, newest first (used by the protected admin endpoint).
 async function listSubmissions(limit = 500) {
   const { rows } = await pool.query(
-    `SELECT id, received_at, name, email, company, ip, user_agent
+    `SELECT id, received_at, name, email, company, lang, ip, user_agent
        FROM submissions
        ORDER BY received_at DESC
        LIMIT $1`,

@@ -1,4 +1,4 @@
-# Local PostgreSQL for Ride View development.
+# Local PostgreSQL for RideView development.
 #
 #   docker compose up -d        # start Postgres in the background
 #   docker compose down         # stop it (data is kept in the named volume)

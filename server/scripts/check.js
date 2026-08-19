@@ -1,5 +1,5 @@
 /**
- * Ride View — preflight check
+ * RideView — preflight check
  * ------------------------------------------------------------
  * Verifies your environment is wired up correctly BEFORE you deploy or rely on
  * the form: it connects to PostgreSQL (and ensures the table exists) and, if

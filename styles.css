@@ -1,5 +1,5 @@
 /* ============================================================
-   RIDE VIEW — brand: dark navy + electric blue
+   RIDEVIEW — brand: dark navy + electric blue
    ============================================================ */
 :root {
   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -90,12 +90,24 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
 .site-header{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--color-bg) 72%, transparent);border-bottom:1px solid transparent;transition:border-color .3s, background .3s}
 .site-header.scrolled{border-color:var(--color-border);background:color-mix(in srgb,var(--color-bg) 90%, transparent)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:4.75rem;gap:var(--space-6)}
+<<<<<<< HEAD
 .logo{display:flex;align-items:center}
 .logo-img{height:34px;width:auto;display:block;border-radius:8px}
 .logo-img--dark{display:block}
 .logo-img--light{display:none}
 [data-theme="light"] .logo-img--dark{display:none}
 [data-theme="light"] .logo-img--light{display:block}
+=======
+/* Brand lockup. Two artwork files, one per theme: the light-on-dark version for
+   the dark theme, the dark-on-light version for the light theme. Both are always
+   in the DOM and CSS picks one, so switching themes never reloads an image. The
+   anchor carries the accessible name, so the images themselves are decorative. */
+.logo{display:flex;align-items:center}
+.logo-img{display:block;height:2.1rem;width:auto}
+[data-theme="dark"] .logo-img-light{display:none}
+[data-theme="light"] .logo-img-dark{display:none}
+.site-footer .logo-img{height:2.6rem}
+>>>>>>> 67a1816 (form fix, logo and new pics)
 .nav{display:flex;gap:var(--space-6);font-size:var(--text-sm);font-weight:500}
 .nav a{position:relative;color:var(--color-text-muted);padding-block:.35rem}
 .nav a:hover{color:var(--color-text)}
@@ -229,6 +241,7 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
 .cta-form input:focus{border-color:var(--brand);background:rgba(255,255,255,.1)}
 .cta-form .btn{flex:1 1 100%;max-width:280px}
 .form-msg{margin-top:var(--space-6);color:var(--brand-2);font-weight:600}
+.form-msg.is-error{color:#e9576b}
 
 /* ---------- footer ---------- */
 .site-footer{background:var(--color-surface);border-top:1px solid var(--color-border);padding-block:var(--space-12)}
@@ -264,7 +277,7 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
    automatically; these rules handle the few physical-direction cases.
    ============================================================ */
 [dir="rtl"]{
-  /* Use an Arabic-tuned face for body + display copy. "Ride View" stays Latin. */
+  /* Use an Arabic-tuned face for body + display copy. "RideView" stays Latin. */
   --font-body:'IBM Plex Sans Arabic','Satoshi',system-ui,sans-serif;
   --font-display:'IBM Plex Sans Arabic','Clash Display','Satoshi',system-ui,sans-serif;
 }
@@ -277,7 +290,7 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
 /* Quote + banner accent bars move to the right (start) edge in RTL. */
 [dir="rtl"] .banner-line,[dir="rtl"] .quote{border-left:0;border-right:4px solid var(--brand);padding-left:0;padding-right:var(--space-6)}
 /* Logo keeps its Latin left-to-right order even in an RTL document. */
-[dir="rtl"] .logo,[dir="rtl"] .logo-type{direction:ltr}
+[dir="rtl"] .logo{direction:ltr}
 /* Dropdown anchors to the start (right) edge in RTL. */
 [dir="rtl"] .lang-menu{right:auto;left:0}
 /* Submit button arrow already points left in the Arabic copy; let text align naturally. */

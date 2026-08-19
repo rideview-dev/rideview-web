@@ -1,5 +1,5 @@
 /* ============================================================
-   Ride View — translations (source of truth for all site copy)
+   RideView — translations (source of truth for all site copy)
    ------------------------------------------------------------
    HOW TO MAINTAIN
    - Every visible string lives here, keyed by a dot-path (e.g. "hero.title").
@@ -9,7 +9,7 @@
    - Keys used with  data-i18n-html   -> may contain inline HTML such as
                                           <br> and <span class="brand-text">…</span>
    - Keys used with  data-i18n-attr   -> fill an attribute (placeholder, alt, etc.)
-   - "Ride View" is the brand name and stays in Latin script in every language.
+   - "RideView" is the brand name and stays in Latin script in every language.
    - To add a new language: copy the `en` block, translate the values, and add
      the language to LANGS below + a <li> in the header switcher in index.html.
    ============================================================ */
@@ -26,22 +26,22 @@ window.I18N = {
   /* ---------------- ENGLISH (source of truth) ---------------- */
   en: {
     meta: {
-      title: 'Ride View — The Future of Media is In-Ride',
-      description: 'Ride View transforms ride-hailing vehicles into high-impact, measurable digital media channels. Captive audiences, geo-targeting, and real-time movement-based data.',
+      title: 'RideView — The Future of Media is In-Ride',
+      description: 'RideView transforms ride-hailing vehicles into high-impact, measurable digital media channels. Captive audiences, geo-targeting, and real-time movement-based data.',
       ogDescription: 'In-ride digital media that combines the best of OOH and digital — captive attention with measurable results.',
     },
     nav: {
       problem: 'Problem', solution: 'Solution', how: 'How it works',
-      games: 'Games', why: 'Why Ride View', useCases: 'Use cases',
+      games: 'Games', why: 'Why RideView', useCases: 'Use cases',
       partner: 'Partner with us',
     },
     hero: {
       eyebrow: 'Where movement meets meaning',
       title: 'The Future<br>of Media is<br><span class="brand-text">In-Ride.</span>',
       sub: 'Captive. Measurable. <span class="brand-text">Always in motion.</span>',
-      ctaPrimary: 'Partner with Ride View',
+      ctaPrimary: 'Partner with RideView',
       ctaSecondary: 'See how it works',
-      strip: 'RIDE VIEW — WHERE MOVEMENT MEETS MEANING.',
+      strip: 'RideView — WHERE MOVEMENT MEETS MEANING.',
     },
     problem: {
       eyebrow: 'The Problem',
@@ -65,8 +65,8 @@ window.I18N = {
     },
     solution: {
       eyebrow: 'The Solution',
-      title: 'Introducing <span class="brand-text">Ride View.</span>',
-      lead: 'Ride View transforms ride-hailing vehicles into high-impact digital media channels.',
+      title: 'Introducing <span class="brand-text">RideView.</span>',
+      lead: 'RideView transforms ride-hailing vehicles into high-impact digital media channels.',
       f1: { h: 'Premium In-Ride Screens', p: 'High-visibility tablet placements in the back of every ride.' },
       f2: { h: 'Smart Targeting', p: 'Geo-target by city, zones, routes and high-traffic areas.' },
       f3: { h: 'Measurable Impact', p: 'Real-time tracking delivers actionable insights that prove performance.' },
@@ -76,7 +76,7 @@ window.I18N = {
     how: {
       eyebrow: 'How It Works',
       title: 'How It <span class="brand-text">Works.</span>',
-      lead: 'Ride View connects brands with passengers in real time through a simple, powerful process.',
+      lead: 'RideView connects brands with passengers in real time through a simple, powerful process.',
       s1: { h: 'Tablets in Ride Vehicles', p: 'High-quality screens installed on headrests across partner Uber and Lyft vehicles.' },
       s2: { h: 'Ads Shown During Trips', p: 'Dynamic ads are displayed to engaged passengers during their entire ride.' },
       s3: { h: 'Exposure Tracked in Real-Time', p: 'We track each impression based on distance, duration, location and key data points.' },
@@ -86,7 +86,7 @@ window.I18N = {
     games: {
       eyebrow: 'Interactive Experiences',
       title: 'Engagement, <span class="brand-text">not just exposure.</span>',
-      lead: "Passengers don't just watch — they play. Ride View turns the screen into an interactive playground, so brands can capture active attention, not just impressions. Every tap is a moment of connection and a new data point.",
+      lead: "Passengers don't just watch — they play. RideView turns the screen into an interactive playground, so brands can capture active attention, not just impressions. Every tap is a moment of connection and a new data point.",
       g1: { h: 'Branded Trivia & Quizzes', p: 'Sponsored quizzes tied to a campaign that reward knowledge and keep passengers engaged.' },
       g2: { h: 'Spin-to-Win & Rewards', p: 'Prize wheels, scratch cards, and instant offers that drive action before the ride ends.' },
       g3: { h: 'Casual Mini-Games', p: 'Quick, branded arcade-style games that make the wait fun and memorable.' },
@@ -98,7 +98,7 @@ window.I18N = {
     measure: {
       eyebrow: 'Measurement Advantage',
       title: 'Built for <span class="brand-text">Accountability.</span>',
-      lead: 'Ride View provides real-time, movement-based data so brands know exactly how their ads perform.',
+      lead: 'RideView provides real-time, movement-based data so brands know exactly how their ads perform.',
       m1: { h: 'Distance-Based Impressions', p: 'Impressions calculated on actual distance traveled, not estimates.' },
       m2: { h: 'Unique Ride Exposure', p: 'Track the number of unique passengers who saw your ads.' },
       m3: { h: 'Time Spent Viewing', p: 'Measure average view time to understand real attention.' },
@@ -109,10 +109,10 @@ window.I18N = {
       banner: 'Not estimated impressions. <span class="brand-text">Real movement-based data.</span>',
     },
     why: {
-      eyebrow: 'Why Ride View',
+      eyebrow: 'Why RideView',
       title: 'A New Media Category<br>That <span class="brand-text">Outperforms.</span>',
-      lead: 'Ride View combines the best of OOH and digital — with unmatched attention and measurable results.',
-      th: { feature: 'Feature', ooh: 'OOH<span>Outdoor</span>', mobile: 'Mobile Ads<span>Digital</span>', rv: 'Ride View<span>In-Ride</span>' },
+      lead: 'RideView combines the best of OOH and digital — with unmatched attention and measurable results.',
+      th: { feature: 'Feature', ooh: 'OOH<span>Outdoor</span>', mobile: 'Mobile Ads<span>Digital</span>', rv: 'RideView<span>In-Ride</span>' },
       r1: { label: 'Audience Attention' },
       r2: { label: 'Targeting' },
       r3: { label: 'Measurability' },
@@ -120,12 +120,12 @@ window.I18N = {
       r5: { label: 'Context & Relevance' },
       r6: { label: 'ROI Potential' },
       lvl: { low: 'Low', mid: 'Moderate', moderate: 'Moderate', limited: 'Limited', high: 'High', no: 'No' },
-      banner: 'Ride View sits at the intersection of <span class="brand-text">attention, relevance, and accountability.</span>',
+      banner: 'RideView sits at the intersection of <span class="brand-text">attention, relevance, and accountability.</span>',
     },
     useCases: {
       eyebrow: 'Use Cases',
       title: 'Built for <span class="brand-text">Modern Brands.</span>',
-      lead: 'Ride View helps brands reach the right people, in the right place, at the right moment — when attention is undivided.',
+      lead: 'RideView helps brands reach the right people, in the right place, at the right moment — when attention is undivided.',
       u1: { h: 'Automotive Launches', p: 'Build awareness and drive consideration for new models among high-intent audiences in key locations.' },
       u2: { h: 'Real Estate & Property', p: 'Target potential buyers and renters in relevant areas, driving footfall and inquiries with precision.' },
       u3: { h: 'Retail & Shopping', p: 'Promote offers, new arrivals and seasonal campaigns to drive store visits and sales.' },
@@ -145,33 +145,35 @@ window.I18N = {
     },
     cta: {
       title: "Let's Move<br><span class=\"brand-text\">Your Brand Forward.</span>",
-      lead: 'Partner with Ride View to turn every ride into measurable brand momentum.',
+      lead: 'Partner with RideView to turn every ride into measurable brand momentum.',
       name: 'Your name', email: 'Work email', company: 'Company',
       submit: "Let's start the journey →",
       success: "Thanks — we'll be in touch shortly to turn your movement into meaning.",
+      sending: 'Sending…',
+      error: "Something went wrong. Please email us directly at dev@rideview.ca.",
     },
-    footer: { tag: 'Where movement meets meaning.', copy: 'Ride View. All rights reserved.' },
+    footer: { tag: 'Where movement meets meaning.', copy: 'RideView. All rights reserved.' },
   },
 
   /* ---------------- FRENCH ---------------- */
   fr: {
     meta: {
-      title: 'Ride View — L\u2019avenir des médias se joue à bord',
-      description: 'Ride View transforme les véhicules de VTC en supports médias numériques mesurables et à fort impact. Audiences captives, ciblage géographique et données en temps réel basées sur le déplacement.',
+      title: 'RideView — L\u2019avenir des médias se joue à bord',
+      description: 'RideView transforme les véhicules de VTC en supports médias numériques mesurables et à fort impact. Audiences captives, ciblage géographique et données en temps réel basées sur le déplacement.',
       ogDescription: 'Des médias numériques à bord qui réunissent le meilleur de l\u2019affichage extérieur et du digital — une attention captive et des résultats mesurables.',
     },
     nav: {
       problem: 'Problème', solution: 'Solution', how: 'Fonctionnement',
-      games: 'Jeux', why: 'Pourquoi Ride View', useCases: 'Cas d\u2019usage',
+      games: 'Jeux', why: 'Pourquoi RideView', useCases: 'Cas d\u2019usage',
       partner: 'Devenir partenaire',
     },
     hero: {
       eyebrow: 'Là où le mouvement prend du sens',
       title: 'L\u2019avenir<br>des médias<br>se joue <span class="brand-text">à bord.</span>',
       sub: 'Captif. Mesurable. <span class="brand-text">Toujours en mouvement.</span>',
-      ctaPrimary: 'Devenir partenaire de Ride View',
+      ctaPrimary: 'Devenir partenaire de RideView',
       ctaSecondary: 'Voir comment ça marche',
-      strip: 'RIDE VIEW — LÀ OÙ LE MOUVEMENT PREND DU SENS.',
+      strip: 'RideView — LÀ OÙ LE MOUVEMENT PREND DU SENS.',
     },
     problem: {
       eyebrow: 'Le problème',
@@ -195,8 +197,8 @@ window.I18N = {
     },
     solution: {
       eyebrow: 'La solution',
-      title: 'Voici <span class="brand-text">Ride View.</span>',
-      lead: 'Ride View transforme les véhicules de VTC en supports médias numériques à fort impact.',
+      title: 'Voici <span class="brand-text">RideView.</span>',
+      lead: 'RideView transforme les véhicules de VTC en supports médias numériques à fort impact.',
       f1: { h: 'Écrans premium à bord', p: 'Des tablettes très visibles installées à l\u2019arrière de chaque véhicule.' },
       f2: { h: 'Ciblage intelligent', p: 'Ciblage géographique par ville, zone, itinéraire et secteur à fort trafic.' },
       f3: { h: 'Impact mesurable', p: 'Un suivi en temps réel qui fournit des analyses concrètes et prouve la performance.' },
@@ -206,7 +208,7 @@ window.I18N = {
     how: {
       eyebrow: 'Fonctionnement',
       title: 'Comment ça <span class="brand-text">marche.</span>',
-      lead: 'Ride View relie les marques aux passagers en temps réel grâce à un processus simple et puissant.',
+      lead: 'RideView relie les marques aux passagers en temps réel grâce à un processus simple et puissant.',
       s1: { h: 'Tablettes dans les véhicules', p: 'Des écrans de qualité installés sur les appuie-têtes des véhicules Uber et Lyft partenaires.' },
       s2: { h: 'Publicités diffusées pendant le trajet', p: 'Des annonces dynamiques s\u2019affichent auprès de passagers attentifs durant tout le trajet.' },
       s3: { h: 'Exposition suivie en temps réel', p: 'Nous mesurons chaque impression selon la distance, la durée, le lieu et d\u2019autres données clés.' },
@@ -216,7 +218,7 @@ window.I18N = {
     games: {
       eyebrow: 'Expériences interactives',
       title: 'De l\u2019engagement, <span class="brand-text">pas seulement de l\u2019exposition.</span>',
-      lead: 'Les passagers ne se contentent pas de regarder — ils jouent. Ride View transforme l\u2019écran en terrain de jeu interactif, pour que les marques captent une attention active, pas seulement des impressions. Chaque interaction est un moment de connexion et une nouvelle donnée.',
+      lead: 'Les passagers ne se contentent pas de regarder — ils jouent. RideView transforme l\u2019écran en terrain de jeu interactif, pour que les marques captent une attention active, pas seulement des impressions. Chaque interaction est un moment de connexion et une nouvelle donnée.',
       g1: { h: 'Quiz et jeux de culture sponsorisés', p: 'Des quiz liés à une campagne qui récompensent le savoir et gardent les passagers engagés.' },
       g2: { h: 'Roue de la fortune et récompenses', p: 'Roues à prix, cartes à gratter et offres instantanées qui incitent à l\u2019action avant la fin du trajet.' },
       g3: { h: 'Mini-jeux décontractés', p: 'Des petits jeux d\u2019arcade aux couleurs de la marque qui rendent l\u2019attente amusante et mémorable.' },
@@ -228,7 +230,7 @@ window.I18N = {
     measure: {
       eyebrow: 'L\u2019avantage de la mesure',
       title: 'Conçu pour la <span class="brand-text">responsabilité.</span>',
-      lead: 'Ride View fournit des données en temps réel, basées sur le déplacement, pour que les marques sachent exactement comment leurs publicités performent.',
+      lead: 'RideView fournit des données en temps réel, basées sur le déplacement, pour que les marques sachent exactement comment leurs publicités performent.',
       m1: { h: 'Impressions basées sur la distance', p: 'Des impressions calculées sur la distance réellement parcourue, pas sur des estimations.' },
       m2: { h: 'Exposition par trajet unique', p: 'Suivez le nombre de passagers uniques ayant vu vos publicités.' },
       m3: { h: 'Temps de visionnage', p: 'Mesurez la durée moyenne de visionnage pour comprendre l\u2019attention réelle.' },
@@ -239,10 +241,10 @@ window.I18N = {
       banner: 'Pas d\u2019impressions estimées. <span class="brand-text">De vraies données basées sur le déplacement.</span>',
     },
     why: {
-      eyebrow: 'Pourquoi Ride View',
+      eyebrow: 'Pourquoi RideView',
       title: 'Une nouvelle catégorie de médias<br>qui <span class="brand-text">surpasse les autres.</span>',
-      lead: 'Ride View réunit le meilleur de l\u2019affichage extérieur et du digital — avec une attention inégalée et des résultats mesurables.',
-      th: { feature: 'Critère', ooh: 'Affichage<span>Extérieur</span>', mobile: 'Pub mobile<span>Digital</span>', rv: 'Ride View<span>À bord</span>' },
+      lead: 'RideView réunit le meilleur de l\u2019affichage extérieur et du digital — avec une attention inégalée et des résultats mesurables.',
+      th: { feature: 'Critère', ooh: 'Affichage<span>Extérieur</span>', mobile: 'Pub mobile<span>Digital</span>', rv: 'RideView<span>À bord</span>' },
       r1: { label: 'Attention de l\u2019audience' },
       r2: { label: 'Ciblage' },
       r3: { label: 'Mesurabilité' },
@@ -250,12 +252,12 @@ window.I18N = {
       r5: { label: 'Contexte et pertinence' },
       r6: { label: 'Potentiel de ROI' },
       lvl: { low: 'Faible', mid: 'Modéré', moderate: 'Modéré', limited: 'Limité', high: 'Élevé', no: 'Non' },
-      banner: 'Ride View se situe à la croisée de <span class="brand-text">l\u2019attention, de la pertinence et de la responsabilité.</span>',
+      banner: 'RideView se situe à la croisée de <span class="brand-text">l\u2019attention, de la pertinence et de la responsabilité.</span>',
     },
     useCases: {
       eyebrow: 'Cas d\u2019usage',
       title: 'Conçu pour les <span class="brand-text">marques modernes.</span>',
-      lead: 'Ride View aide les marques à toucher les bonnes personnes, au bon endroit, au bon moment — lorsque l\u2019attention est entière.',
+      lead: 'RideView aide les marques à toucher les bonnes personnes, au bon endroit, au bon moment — lorsque l\u2019attention est entière.',
       u1: { h: 'Lancements automobiles', p: 'Développez la notoriété et l\u2019intérêt pour de nouveaux modèles auprès d\u2019audiences à forte intention dans des lieux clés.' },
       u2: { h: 'Immobilier', p: 'Ciblez acheteurs et locataires potentiels dans les zones pertinentes, générant visites et demandes avec précision.' },
       u3: { h: 'Commerce et distribution', p: 'Mettez en avant offres, nouveautés et campagnes saisonnières pour générer des visites en magasin et des ventes.' },
@@ -275,33 +277,35 @@ window.I18N = {
     },
     cta: {
       title: 'Faisons avancer<br><span class="brand-text">votre marque.</span>',
-      lead: 'Devenez partenaire de Ride View pour transformer chaque trajet en élan de marque mesurable.',
+      lead: 'Devenez partenaire de RideView pour transformer chaque trajet en élan de marque mesurable.',
       name: 'Votre nom', email: 'E-mail professionnel', company: 'Entreprise',
       submit: 'Commençons le voyage →',
       success: 'Merci — nous vous recontacterons très vite pour donner du sens à votre mouvement.',
+      sending: 'Envoi…',
+      error: "Une erreur est survenue. Écrivez-nous directement à dev@rideview.ca.",
     },
-    footer: { tag: 'Là où le mouvement prend du sens.', copy: 'Ride View. Tous droits réservés.' },
+    footer: { tag: 'Là où le mouvement prend du sens.', copy: 'RideView. Tous droits réservés.' },
   },
 
   /* ---------------- SPANISH ---------------- */
   es: {
     meta: {
-      title: 'Ride View — El futuro de los medios viaja a bordo',
-      description: 'Ride View convierte los vehículos de transporte privado en canales de medios digitales medibles y de gran impacto. Audiencias cautivas, segmentación geográfica y datos en tiempo real basados en el movimiento.',
+      title: 'RideView — El futuro de los medios viaja a bordo',
+      description: 'RideView convierte los vehículos de transporte privado en canales de medios digitales medibles y de gran impacto. Audiencias cautivas, segmentación geográfica y datos en tiempo real basados en el movimiento.',
       ogDescription: 'Medios digitales a bordo que combinan lo mejor de la publicidad exterior y la digital: atención cautiva y resultados medibles.',
     },
     nav: {
       problem: 'Problema', solution: 'Solución', how: 'Cómo funciona',
-      games: 'Juegos', why: 'Por qué Ride View', useCases: 'Casos de uso',
+      games: 'Juegos', why: 'Por qué RideView', useCases: 'Casos de uso',
       partner: 'Sé nuestro socio',
     },
     hero: {
       eyebrow: 'Donde el movimiento cobra sentido',
       title: 'El futuro<br>de los medios<br><span class="brand-text">viaja a bordo.</span>',
       sub: 'Cautivo. Medible. <span class="brand-text">Siempre en movimiento.</span>',
-      ctaPrimary: 'Sé socio de Ride View',
+      ctaPrimary: 'Sé socio de RideView',
       ctaSecondary: 'Mira cómo funciona',
-      strip: 'RIDE VIEW — DONDE EL MOVIMIENTO COBRA SENTIDO.',
+      strip: 'RideView — DONDE EL MOVIMIENTO COBRA SENTIDO.',
     },
     problem: {
       eyebrow: 'El problema',
@@ -325,8 +329,8 @@ window.I18N = {
     },
     solution: {
       eyebrow: 'La solución',
-      title: 'Te presentamos <span class="brand-text">Ride View.</span>',
-      lead: 'Ride View convierte los vehículos de transporte privado en canales de medios digitales de gran impacto.',
+      title: 'Te presentamos <span class="brand-text">RideView.</span>',
+      lead: 'RideView convierte los vehículos de transporte privado en canales de medios digitales de gran impacto.',
       f1: { h: 'Pantallas premium a bordo', p: 'Tabletas de alta visibilidad en la parte trasera de cada viaje.' },
       f2: { h: 'Segmentación inteligente', p: 'Segmentación geográfica por ciudad, zonas, rutas y áreas de alto tráfico.' },
       f3: { h: 'Impacto medible', p: 'El seguimiento en tiempo real ofrece datos accionables que demuestran el rendimiento.' },
@@ -336,7 +340,7 @@ window.I18N = {
     how: {
       eyebrow: 'Cómo funciona',
       title: 'Cómo <span class="brand-text">funciona.</span>',
-      lead: 'Ride View conecta a las marcas con los pasajeros en tiempo real mediante un proceso sencillo y potente.',
+      lead: 'RideView conecta a las marcas con los pasajeros en tiempo real mediante un proceso sencillo y potente.',
       s1: { h: 'Tabletas en los vehículos', p: 'Pantallas de alta calidad instaladas en los reposacabezas de vehículos asociados de Uber y Lyft.' },
       s2: { h: 'Anuncios durante el viaje', p: 'Anuncios dinámicos se muestran a pasajeros atentos durante todo el trayecto.' },
       s3: { h: 'Exposición medida en tiempo real', p: 'Medimos cada impresión según distancia, duración, ubicación y datos clave.' },
@@ -346,7 +350,7 @@ window.I18N = {
     games: {
       eyebrow: 'Experiencias interactivas',
       title: 'Interacción, <span class="brand-text">no solo exposición.</span>',
-      lead: 'Los pasajeros no solo miran: juegan. Ride View convierte la pantalla en un espacio interactivo para que las marcas capten atención activa, no solo impresiones. Cada toque es un momento de conexión y un nuevo dato.',
+      lead: 'Los pasajeros no solo miran: juegan. RideView convierte la pantalla en un espacio interactivo para que las marcas capten atención activa, no solo impresiones. Cada toque es un momento de conexión y un nuevo dato.',
       g1: { h: 'Trivias y concursos de marca', p: 'Concursos patrocinados ligados a una campaña que premian el conocimiento y mantienen al pasajero atento.' },
       g2: { h: 'Ruleta de premios y recompensas', p: 'Ruletas, tarjetas para rascar y ofertas instantáneas que impulsan la acción antes de que termine el viaje.' },
       g3: { h: 'Minijuegos casuales', p: 'Juegos rápidos tipo arcade con la marca que hacen la espera divertida y memorable.' },
@@ -358,7 +362,7 @@ window.I18N = {
     measure: {
       eyebrow: 'La ventaja de la medición',
       title: 'Diseñado para la <span class="brand-text">rendición de cuentas.</span>',
-      lead: 'Ride View ofrece datos en tiempo real basados en el movimiento para que las marcas sepan exactamente cómo rinden sus anuncios.',
+      lead: 'RideView ofrece datos en tiempo real basados en el movimiento para que las marcas sepan exactamente cómo rinden sus anuncios.',
       m1: { h: 'Impresiones por distancia', p: 'Impresiones calculadas según la distancia realmente recorrida, no estimaciones.' },
       m2: { h: 'Exposición por viaje único', p: 'Mide cuántos pasajeros únicos vieron tus anuncios.' },
       m3: { h: 'Tiempo de visualización', p: 'Mide el tiempo promedio de visualización para entender la atención real.' },
@@ -369,10 +373,10 @@ window.I18N = {
       banner: 'No impresiones estimadas. <span class="brand-text">Datos reales basados en el movimiento.</span>',
     },
     why: {
-      eyebrow: 'Por qué Ride View',
+      eyebrow: 'Por qué RideView',
       title: 'Una nueva categoría de medios<br>que <span class="brand-text">rinde más.</span>',
-      lead: 'Ride View combina lo mejor de la publicidad exterior y la digital, con una atención inigualable y resultados medibles.',
-      th: { feature: 'Característica', ooh: 'Exterior<span>OOH</span>', mobile: 'Pub. móvil<span>Digital</span>', rv: 'Ride View<span>A bordo</span>' },
+      lead: 'RideView combina lo mejor de la publicidad exterior y la digital, con una atención inigualable y resultados medibles.',
+      th: { feature: 'Característica', ooh: 'Exterior<span>OOH</span>', mobile: 'Pub. móvil<span>Digital</span>', rv: 'RideView<span>A bordo</span>' },
       r1: { label: 'Atención de la audiencia' },
       r2: { label: 'Segmentación' },
       r3: { label: 'Medición' },
@@ -380,12 +384,12 @@ window.I18N = {
       r5: { label: 'Contexto y relevancia' },
       r6: { label: 'Potencial de ROI' },
       lvl: { low: 'Baja', mid: 'Moderada', moderate: 'Moderada', limited: 'Limitada', high: 'Alta', no: 'No' },
-      banner: 'Ride View se sitúa en la intersección de <span class="brand-text">atención, relevancia y rendición de cuentas.</span>',
+      banner: 'RideView se sitúa en la intersección de <span class="brand-text">atención, relevancia y rendición de cuentas.</span>',
     },
     useCases: {
       eyebrow: 'Casos de uso',
       title: 'Hecho para las <span class="brand-text">marcas modernas.</span>',
-      lead: 'Ride View ayuda a las marcas a llegar a las personas correctas, en el lugar correcto, en el momento correcto, cuando la atención es total.',
+      lead: 'RideView ayuda a las marcas a llegar a las personas correctas, en el lugar correcto, en el momento correcto, cuando la atención es total.',
       u1: { h: 'Lanzamientos de automoción', p: 'Genera notoriedad e interés por nuevos modelos entre audiencias de alta intención en ubicaciones clave.' },
       u2: { h: 'Inmobiliaria', p: 'Segmenta a posibles compradores e inquilinos en zonas relevantes, generando visitas y consultas con precisión.' },
       u3: { h: 'Comercio y tiendas', p: 'Promociona ofertas, novedades y campañas de temporada para impulsar visitas y ventas.' },
@@ -405,33 +409,35 @@ window.I18N = {
     },
     cta: {
       title: 'Hagamos avanzar<br><span class="brand-text">tu marca.</span>',
-      lead: 'Asóciate con Ride View para convertir cada viaje en impulso de marca medible.',
+      lead: 'Asóciate con RideView para convertir cada viaje en impulso de marca medible.',
       name: 'Tu nombre', email: 'Correo profesional', company: 'Empresa',
       submit: 'Comencemos el viaje →',
       success: 'Gracias: te contactaremos muy pronto para darle sentido a tu movimiento.',
+      sending: 'Enviando…',
+      error: 'Algo salió mal. Escríbenos directamente a dev@rideview.ca.',
     },
-    footer: { tag: 'Donde el movimiento cobra sentido.', copy: 'Ride View. Todos los derechos reservados.' },
+    footer: { tag: 'Donde el movimiento cobra sentido.', copy: 'RideView. Todos los derechos reservados.' },
   },
 
   /* ---------------- RUSSIAN ---------------- */
   ru: {
     meta: {
-      title: 'Ride View — Будущее медиа происходит в поездке',
-      description: 'Ride View превращает автомобили такси в высокоэффективные и измеримые цифровые медиаканалы. Вовлечённая аудитория, геотаргетинг и данные в реальном времени на основе движения.',
+      title: 'RideView — Будущее медиа происходит в поездке',
+      description: 'RideView превращает автомобили такси в высокоэффективные и измеримые цифровые медиаканалы. Вовлечённая аудитория, геотаргетинг и данные в реальном времени на основе движения.',
       ogDescription: 'Цифровые медиа в поездке, объединяющие лучшее из наружной и цифровой рекламы — захваченное внимание и измеримые результаты.',
     },
     nav: {
       problem: 'Проблема', solution: 'Решение', how: 'Как это работает',
-      games: 'Игры', why: 'Почему Ride View', useCases: 'Применение',
+      games: 'Игры', why: 'Почему RideView', useCases: 'Применение',
       partner: 'Стать партнёром',
     },
     hero: {
       eyebrow: 'Где движение обретает смысл',
       title: 'Будущее медиа<br>происходит<br><span class="brand-text">в поездке.</span>',
       sub: 'Вовлечённо. Измеримо. <span class="brand-text">Всегда в движении.</span>',
-      ctaPrimary: 'Стать партнёром Ride View',
+      ctaPrimary: 'Стать партнёром RideView',
       ctaSecondary: 'Как это работает',
-      strip: 'RIDE VIEW — ГДЕ ДВИЖЕНИЕ ОБРЕТАЕТ СМЫСЛ.',
+      strip: 'RideView — ГДЕ ДВИЖЕНИЕ ОБРЕТАЕТ СМЫСЛ.',
     },
     problem: {
       eyebrow: 'Проблема',
@@ -455,8 +461,8 @@ window.I18N = {
     },
     solution: {
       eyebrow: 'Решение',
-      title: 'Представляем <span class="brand-text">Ride View.</span>',
-      lead: 'Ride View превращает автомобили такси в высокоэффективные цифровые медиаканалы.',
+      title: 'Представляем <span class="brand-text">RideView.</span>',
+      lead: 'RideView превращает автомобили такси в высокоэффективные цифровые медиаканалы.',
       f1: { h: 'Премиальные экраны в поездке', p: 'Заметные планшеты, установленные в задней части каждого автомобиля.' },
       f2: { h: 'Умный таргетинг', p: 'Геотаргетинг по городу, зонам, маршрутам и районам с высоким трафиком.' },
       f3: { h: 'Измеримый эффект', p: 'Отслеживание в реальном времени даёт практичные данные, подтверждающие результат.' },
@@ -466,7 +472,7 @@ window.I18N = {
     how: {
       eyebrow: 'Как это работает',
       title: 'Как это <span class="brand-text">работает.</span>',
-      lead: 'Ride View связывает бренды с пассажирами в реальном времени через простой и эффективный процесс.',
+      lead: 'RideView связывает бренды с пассажирами в реальном времени через простой и эффективный процесс.',
       s1: { h: 'Планшеты в автомобилях', p: 'Качественные экраны на подголовниках в автомобилях партнёров Uber и Lyft.' },
       s2: { h: 'Реклама во время поездки', p: 'Динамичная реклама показывается вовлечённым пассажирам на протяжении всей поездки.' },
       s3: { h: 'Охват в реальном времени', p: 'Мы фиксируем каждый показ по расстоянию, длительности, локации и ключевым данным.' },
@@ -476,7 +482,7 @@ window.I18N = {
     games: {
       eyebrow: 'Интерактивный опыт',
       title: 'Вовлечение, <span class="brand-text">а не просто показ.</span>',
-      lead: 'Пассажиры не просто смотрят — они играют. Ride View превращает экран в интерактивную площадку, чтобы бренды получали активное внимание, а не только показы. Каждое касание — это момент связи и новые данные.',
+      lead: 'Пассажиры не просто смотрят — они играют. RideView превращает экран в интерактивную площадку, чтобы бренды получали активное внимание, а не только показы. Каждое касание — это момент связи и новые данные.',
       g1: { h: 'Брендовые викторины и квизы', p: 'Спонсорские квизы в рамках кампании, которые вознаграждают знания и удерживают внимание пассажиров.' },
       g2: { h: 'Колесо удачи и награды', p: 'Колёса с призами, скретч-карты и мгновенные предложения, побуждающие к действию до конца поездки.' },
       g3: { h: 'Лёгкие мини-игры', p: 'Быстрые брендовые аркадные игры, которые делают ожидание весёлым и запоминающимся.' },
@@ -488,7 +494,7 @@ window.I18N = {
     measure: {
       eyebrow: 'Преимущество измеримости',
       title: 'Создано для <span class="brand-text">прозрачности.</span>',
-      lead: 'Ride View предоставляет данные в реальном времени на основе движения, чтобы бренды точно знали эффективность своей рекламы.',
+      lead: 'RideView предоставляет данные в реальном времени на основе движения, чтобы бренды точно знали эффективность своей рекламы.',
       m1: { h: 'Показы на основе расстояния', p: 'Показы рассчитываются по фактически пройденному расстоянию, а не по оценкам.' },
       m2: { h: 'Охват уникальных поездок', p: 'Отслеживайте число уникальных пассажиров, увидевших вашу рекламу.' },
       m3: { h: 'Время просмотра', p: 'Измеряйте среднее время просмотра, чтобы понять реальное внимание.' },
@@ -499,10 +505,10 @@ window.I18N = {
       banner: 'Не оценочные показы. <span class="brand-text">Реальные данные на основе движения.</span>',
     },
     why: {
-      eyebrow: 'Почему Ride View',
+      eyebrow: 'Почему RideView',
       title: 'Новая категория медиа,<br>которая <span class="brand-text">превосходит остальные.</span>',
-      lead: 'Ride View объединяет лучшее из наружной и цифровой рекламы — с непревзойдённым вниманием и измеримыми результатами.',
-      th: { feature: 'Критерий', ooh: 'Наружная<span>OOH</span>', mobile: 'Моб. реклама<span>Цифровая</span>', rv: 'Ride View<span>В поездке</span>' },
+      lead: 'RideView объединяет лучшее из наружной и цифровой рекламы — с непревзойдённым вниманием и измеримыми результатами.',
+      th: { feature: 'Критерий', ooh: 'Наружная<span>OOH</span>', mobile: 'Моб. реклама<span>Цифровая</span>', rv: 'RideView<span>В поездке</span>' },
       r1: { label: 'Внимание аудитории' },
       r2: { label: 'Таргетинг' },
       r3: { label: 'Измеримость' },
@@ -510,12 +516,12 @@ window.I18N = {
       r5: { label: 'Контекст и релевантность' },
       r6: { label: 'Потенциал ROI' },
       lvl: { low: 'Низко', mid: 'Умеренно', moderate: 'Умеренно', limited: 'Ограниченно', high: 'Высоко', no: 'Нет' },
-      banner: 'Ride View находится на пересечении <span class="brand-text">внимания, релевантности и прозрачности.</span>',
+      banner: 'RideView находится на пересечении <span class="brand-text">внимания, релевантности и прозрачности.</span>',
     },
     useCases: {
       eyebrow: 'Применение',
       title: 'Создано для <span class="brand-text">современных брендов.</span>',
-      lead: 'Ride View помогает брендам достучаться до нужных людей, в нужном месте, в нужный момент — когда внимание целиком отдано.',
+      lead: 'RideView помогает брендам достучаться до нужных людей, в нужном месте, в нужный момент — когда внимание целиком отдано.',
       u1: { h: 'Запуски автомобилей', p: 'Повышайте узнаваемость и интерес к новым моделям среди заинтересованной аудитории в ключевых местах.' },
       u2: { h: 'Недвижимость', p: 'Таргетируйте потенциальных покупателей и арендаторов в нужных районах, точно генерируя визиты и заявки.' },
       u3: { h: 'Ритейл и шопинг', p: 'Продвигайте акции, новинки и сезонные кампании, чтобы увеличить посещаемость и продажи.' },
@@ -535,33 +541,35 @@ window.I18N = {
     },
     cta: {
       title: 'Двигайте<br><span class="brand-text">свой бренд вперёд.</span>',
-      lead: 'Станьте партнёром Ride View, чтобы превратить каждую поездку в измеримый импульс бренда.',
+      lead: 'Станьте партнёром RideView, чтобы превратить каждую поездку в измеримый импульс бренда.',
       name: 'Ваше имя', email: 'Рабочая почта', company: 'Компания',
       submit: 'Начнём путь →',
       success: 'Спасибо — мы скоро свяжемся с вами, чтобы наполнить ваше движение смыслом.',
+      sending: 'Отправка…',
+      error: 'Что-то пошло не так. Напишите нам напрямую на dev@rideview.ca.',
     },
-    footer: { tag: 'Где движение обретает смысл.', copy: 'Ride View. Все права защищены.' },
+    footer: { tag: 'Где движение обретает смысл.', copy: 'RideView. Все права защищены.' },
   },
 
   /* ---------------- ARABIC (RTL) ---------------- */
   ar: {
     meta: {
-      title: 'Ride View — مستقبل الإعلام يبدأ داخل الرحلة',
-      description: 'تحوّل Ride View سيارات النقل الذكي إلى قنوات إعلامية رقمية عالية التأثير وقابلة للقياس. جمهور أسير، واستهداف جغرافي، وبيانات لحظية مبنية على الحركة.',
+      title: 'RideView — مستقبل الإعلام يبدأ داخل الرحلة',
+      description: 'تحوّل RideView سيارات النقل الذكي إلى قنوات إعلامية رقمية عالية التأثير وقابلة للقياس. جمهور أسير، واستهداف جغرافي، وبيانات لحظية مبنية على الحركة.',
       ogDescription: 'إعلام رقمي داخل الرحلة يجمع بين أفضل ما في الإعلانات الخارجية والرقمية — انتباه أسير ونتائج قابلة للقياس.',
     },
     nav: {
       problem: 'المشكلة', solution: 'الحل', how: 'كيف يعمل',
-      games: 'الألعاب', why: 'لماذا Ride View', useCases: 'حالات الاستخدام',
+      games: 'الألعاب', why: 'لماذا RideView', useCases: 'حالات الاستخدام',
       partner: 'كن شريكنا',
     },
     hero: {
       eyebrow: 'حيث تلتقي الحركة بالمعنى',
       title: 'مستقبل<br>الإعلام<br><span class="brand-text">داخل الرحلة.</span>',
       sub: 'أسير. قابل للقياس. <span class="brand-text">دائمًا في حركة.</span>',
-      ctaPrimary: 'كن شريكًا لـ Ride View',
+      ctaPrimary: 'كن شريكًا لـ RideView',
       ctaSecondary: 'شاهد كيف يعمل',
-      strip: 'RIDE VIEW — حيث تلتقي الحركة بالمعنى.',
+      strip: 'RideView — حيث تلتقي الحركة بالمعنى.',
     },
     problem: {
       eyebrow: 'المشكلة',
@@ -585,8 +593,8 @@ window.I18N = {
     },
     solution: {
       eyebrow: 'الحل',
-      title: 'نقدّم لكم <span class="brand-text">Ride View.</span>',
-      lead: 'تحوّل Ride View سيارات النقل الذكي إلى قنوات إعلامية رقمية عالية التأثير.',
+      title: 'نقدّم لكم <span class="brand-text">RideView.</span>',
+      lead: 'تحوّل RideView سيارات النقل الذكي إلى قنوات إعلامية رقمية عالية التأثير.',
       f1: { h: 'شاشات فاخرة داخل الرحلة', p: 'أجهزة لوحية بارزة مثبّتة في الجزء الخلفي من كل رحلة.' },
       f2: { h: 'استهداف ذكي', p: 'استهداف جغرافي حسب المدينة والمناطق والمسارات والأماكن المزدحمة.' },
       f3: { h: 'تأثير قابل للقياس', p: 'التتبّع اللحظي يقدّم رؤى عملية تُثبت الأداء.' },
@@ -596,7 +604,7 @@ window.I18N = {
     how: {
       eyebrow: 'كيف يعمل',
       title: 'كيف <span class="brand-text">يعمل.</span>',
-      lead: 'تربط Ride View العلامات بالركاب لحظيًا عبر عملية بسيطة وفعّالة.',
+      lead: 'تربط RideView العلامات بالركاب لحظيًا عبر عملية بسيطة وفعّالة.',
       s1: { h: 'أجهزة لوحية في المركبات', p: 'شاشات عالية الجودة مثبّتة على مساند الرأس في مركبات Uber وLyft الشريكة.' },
       s2: { h: 'إعلانات تُعرض أثناء الرحلة', p: 'تُعرض إعلانات ديناميكية للركاب المنتبهين طوال الرحلة.' },
       s3: { h: 'تتبّع الظهور لحظيًا', p: 'نتتبّع كل انطباع بناءً على المسافة والمدة والموقع ونقاط بيانات أساسية.' },
@@ -606,7 +614,7 @@ window.I18N = {
     games: {
       eyebrow: 'تجارب تفاعلية',
       title: 'تفاعل، <span class="brand-text">وليس مجرد ظهور.</span>',
-      lead: 'الركاب لا يكتفون بالمشاهدة — بل يلعبون. تحوّل Ride View الشاشة إلى مساحة تفاعلية، لتلتقط العلامات انتباهًا نشطًا لا مجرد انطباعات. كل لمسة لحظة تواصل ونقطة بيانات جديدة.',
+      lead: 'الركاب لا يكتفون بالمشاهدة — بل يلعبون. تحوّل RideView الشاشة إلى مساحة تفاعلية، لتلتقط العلامات انتباهًا نشطًا لا مجرد انطباعات. كل لمسة لحظة تواصل ونقطة بيانات جديدة.',
       g1: { h: 'مسابقات واختبارات تحمل العلامة', p: 'اختبارات برعاية مرتبطة بحملة تكافئ المعرفة وتُبقي الركاب منشغلين.' },
       g2: { h: 'عجلة الحظ والمكافآت', p: 'عجلات جوائز وبطاقات خدش وعروض فورية تدفع للتحرّك قبل انتهاء الرحلة.' },
       g3: { h: 'ألعاب صغيرة خفيفة', p: 'ألعاب أركيد سريعة تحمل العلامة تجعل الانتظار ممتعًا ولا يُنسى.' },
@@ -618,7 +626,7 @@ window.I18N = {
     measure: {
       eyebrow: 'ميزة القياس',
       title: 'مصمَّم من أجل <span class="brand-text">المساءلة.</span>',
-      lead: 'توفّر Ride View بيانات لحظية مبنية على الحركة لتعرف العلامات تمامًا كيف تؤدّي إعلاناتها.',
+      lead: 'توفّر RideView بيانات لحظية مبنية على الحركة لتعرف العلامات تمامًا كيف تؤدّي إعلاناتها.',
       m1: { h: 'انطباعات مبنية على المسافة', p: 'انطباعات محسوبة على المسافة المقطوعة فعليًا، لا على تقديرات.' },
       m2: { h: 'ظهور لكل رحلة فريدة', p: 'تتبّع عدد الركاب الفريدين الذين شاهدوا إعلاناتك.' },
       m3: { h: 'مدة المشاهدة', p: 'قِس متوسط مدة المشاهدة لفهم الانتباه الحقيقي.' },
@@ -629,10 +637,10 @@ window.I18N = {
       banner: 'ليست انطباعات تقديرية. <span class="brand-text">بيانات حقيقية مبنية على الحركة.</span>',
     },
     why: {
-      eyebrow: 'لماذا Ride View',
+      eyebrow: 'لماذا RideView',
       title: 'فئة إعلامية جديدة<br><span class="brand-text">تتفوّق على غيرها.</span>',
-      lead: 'تجمع Ride View بين أفضل ما في الإعلانات الخارجية والرقمية — بانتباه لا يُضاهى ونتائج قابلة للقياس.',
-      th: { feature: 'المعيار', ooh: 'إعلان خارجي<span>OOH</span>', mobile: 'إعلان جوال<span>رقمي</span>', rv: 'Ride View<span>داخل الرحلة</span>' },
+      lead: 'تجمع RideView بين أفضل ما في الإعلانات الخارجية والرقمية — بانتباه لا يُضاهى ونتائج قابلة للقياس.',
+      th: { feature: 'المعيار', ooh: 'إعلان خارجي<span>OOH</span>', mobile: 'إعلان جوال<span>رقمي</span>', rv: 'RideView<span>داخل الرحلة</span>' },
       r1: { label: 'انتباه الجمهور' },
       r2: { label: 'الاستهداف' },
       r3: { label: 'القابلية للقياس' },
@@ -640,12 +648,12 @@ window.I18N = {
       r5: { label: 'السياق والملاءمة' },
       r6: { label: 'إمكانية العائد على الاستثمار' },
       lvl: { low: 'منخفض', mid: 'متوسط', moderate: 'متوسط', limited: 'محدود', high: 'مرتفع', no: 'لا' },
-      banner: 'تقع Ride View عند تقاطع <span class="brand-text">الانتباه والملاءمة والمساءلة.</span>',
+      banner: 'تقع RideView عند تقاطع <span class="brand-text">الانتباه والملاءمة والمساءلة.</span>',
     },
     useCases: {
       eyebrow: 'حالات الاستخدام',
       title: 'مصمَّم للعلامات <span class="brand-text">العصرية.</span>',
-      lead: 'تساعد Ride View العلامات على الوصول إلى الأشخاص المناسبين، في المكان المناسب، في اللحظة المناسبة — حين يكون الانتباه كاملًا.',
+      lead: 'تساعد RideView العلامات على الوصول إلى الأشخاص المناسبين، في المكان المناسب، في اللحظة المناسبة — حين يكون الانتباه كاملًا.',
       u1: { h: 'إطلاقات السيارات', p: 'ابنِ الوعي وحفّز الاهتمام بالطُرز الجديدة لدى جمهور عالي النية في مواقع رئيسية.' },
       u2: { h: 'العقارات', p: 'استهدف المشترين والمستأجرين المحتملين في المناطق المناسبة، محقّقًا زيارات واستفسارات بدقة.' },
       u3: { h: 'التجزئة والتسوّق', p: 'روّج للعروض والمنتجات الجديدة والحملات الموسمية لزيادة زيارات المتاجر والمبيعات.' },
@@ -665,11 +673,13 @@ window.I18N = {
     },
     cta: {
       title: 'لندفع<br><span class="brand-text">علامتك إلى الأمام.</span>',
-      lead: 'كن شريكًا لـ Ride View لتحويل كل رحلة إلى زخم قابل للقياس لعلامتك.',
+      lead: 'كن شريكًا لـ RideView لتحويل كل رحلة إلى زخم قابل للقياس لعلامتك.',
       name: 'اسمك', email: 'البريد المهني', company: 'الشركة',
       submit: '← لنبدأ الرحلة',
       success: 'شكرًا — سنتواصل معك قريبًا لنمنح حركتك معنى.',
+      sending: 'جارٍ الإرسال…',
+      error: 'حدث خطأ ما. راسلنا مباشرة على dev@rideview.ca.',
     },
-    footer: { tag: 'حيث تلتقي الحركة بالمعنى.', copy: 'Ride View. جميع الحقوق محفوظة.' },
+    footer: { tag: 'حيث تلتقي الحركة بالمعنى.', copy: 'RideView. جميع الحقوق محفوظة.' },
   },
 };

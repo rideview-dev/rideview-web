@@ -1,12 +1,13 @@
 {
   "name": "rideview-api",
   "version": "1.1.0",
-  "description": "Ride View partner/contact form backend (PostgreSQL + email)",
+  "description": "RideView partner/contact form backend (PostgreSQL + email)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "check": "node scripts/check.js"
+    "check": "node scripts/check.js",
+    "mail:test": "node scripts/send-test.js"
   },
   "engines": {
     "node": ">=18"
