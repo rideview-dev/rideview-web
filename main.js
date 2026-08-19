@@ -193,16 +193,20 @@
   if (!form || !msg) return;
 
   // API base URL. Resolved in this order:
-  //   1. If the deploy step substituted a real origin for the placeholder, use it
-  //      (e.g. 'https://api.rideview.ca').
-  //   2. Otherwise use the SAME ORIGIN the page was served from. This is the
+  //   1. The <meta name="rideview-api"> tag in index.html, if it has a value.
+  //      This is the one place to edit when the static files are hosted apart
+  //      from the backend (e.g. static on cPanel, API on Render).
+  //   2. If the deploy step substituted a real origin for the placeholder, use it.
+  //   3. Otherwise use the SAME ORIGIN the page was served from. This is the
   //      normal production setup: server/server.js serves this site and the API
   //      together, so '' resolves to '/api/contact' on whatever host you deploy to.
   //      Same-origin also means no CORS and no mixed-content blocking.
-  //   3. Only fall back to localhost:8000 when the page is clearly NOT being
+  //   4. Only fall back to localhost:8000 when the page is clearly NOT being
   //      served by the API — opened from disk, or from a static dev server.
   const RAW = '__PORT_8000__';
+  const META = (document.querySelector('meta[name="rideview-api"]') || {}).content || '';
   const API = (function () {
+    if (META.trim()) return META.trim().replace(/\/+$/, '');
     if (!RAW.startsWith('__')) return RAW.replace(/\/+$/, '');
     var loc = window.location;
     if (loc.protocol === 'file:') return 'http://localhost:8000';
@@ -214,6 +218,34 @@
     }
     return ''; // same origin
   })();
+
+  // Cold-start warm-up. When the API is on a separate origin it may be hosted on
+  // a platform that sleeps after a period of inactivity, where the first request
+  // pays a 30–60s wake-up. Left alone, that delay lands on the visitor's
+  // submission — the worst possible moment, and long enough that people give up.
+  // So we nudge /api/health early instead: once after the page has settled (the
+  // instance wakes while they read), and again the first time someone touches
+  // the form, which covers visitors who browse for a while before getting in
+  // touch. Fire-and-forget — a failure here is irrelevant and ignored.
+  // Skipped entirely when API is same-origin, since the server is already awake.
+  if (API) {
+    var lastWarm = 0;
+    var warm = function () {
+      var now = Date.now();
+      if (now - lastWarm < 60000) return; // at most once a minute
+      lastWarm = now;
+      try {
+        fetch(API + '/api/health', { method: 'GET', cache: 'no-store' }).catch(function () {});
+      } catch (e) { /* ignore */ }
+    };
+    if (typeof window.requestIdleCallback === 'function') {
+      window.requestIdleCallback(warm, { timeout: 3000 });
+    } else {
+      setTimeout(warm, 1200);
+    }
+    form.addEventListener('focusin', warm);
+    form.addEventListener('pointerdown', warm);
+  }
 
   // Status messages are shown by translation key so that (a) a stale error can
   // never survive into a later success, and (b) the message follows the language

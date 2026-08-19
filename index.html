@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title data-i18n="meta.title">RideView — The Future of Media is In-Ride</title>
-<meta name="description" data-i18n-attr="content:meta.description" content="RideView transforms ride-hailing vehicles into high-impact, measurable digital media channels. Captive audiences, geo-targeting, and real-time movement-based data." />
-<meta property="og:title" data-i18n-attr="content:meta.title" content="RideView — The Future of Media is In-Ride" />
+<title data-i18n="meta.title">Ride View — The Future of Media is In-Ride</title>
+<meta name="description" data-i18n-attr="content:meta.description" content="Ride View transforms ride-hailing vehicles into high-impact, measurable digital media channels. Captive audiences, geo-targeting, and real-time movement-based data." />
+<meta property="og:title" data-i18n-attr="content:meta.title" content="Ride View — The Future of Media is In-Ride" />
 <meta property="og:description" data-i18n-attr="content:meta.ogDescription" content="In-ride digital media that combines the best of OOH and digital — captive attention with measurable results." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://api.fontshare.com" />
@@ -15,6 +15,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="preload" as="image" href="assets/img/hero.jpg" />
+<!-- Where the "Partner with us" form posts.
+     Leave the content EMPTY when this site is served by server/server.js — the
+     form then posts to the same origin, which is the normal setup.
+     Set it to the API's origin (e.g. "https://api.rideview.ca") only when the
+     static files are hosted separately from the backend. It must be https. -->
+<meta name="rideview-api" content="" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon.png" />
@@ -26,11 +32,15 @@
 <header class="site-header" id="header">
   <div class="container header-inner">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <a href="#top" class="logo" aria-label="Ride View home">
       <img class="logo-img logo-img--dark" src="assets/img/logo-dark.png" alt="Ride View" width="150" height="36" />
       <img class="logo-img logo-img--light" src="assets/img/logo-white.png" alt="Ride View" width="150" height="36" />
 =======
     <a href="#top" class="logo" aria-label="RideView home">
+=======
+    <a href="#top" class="logo" aria-label="Ride View home">
+>>>>>>> c959167 (Same-origin API wiring, form fixes, two-email flow, new logo)
       <img class="logo-img logo-img-dark" src="assets/img/logo-dark.png" width="640" height="144" alt="" fetchpriority="high" />
       <img class="logo-img logo-img-light" src="assets/img/logo-white.png" width="640" height="142" alt="" />
 >>>>>>> 67a1816 (form fix, logo and new pics)
@@ -40,7 +50,7 @@
       <a href="#solution" data-i18n="nav.solution">Solution</a>
       <a href="#how" data-i18n="nav.how">How it works</a>
       <a href="#games" data-i18n="nav.games">Games</a>
-      <a href="#why" data-i18n="nav.why">Why RideView</a>
+      <a href="#why" data-i18n="nav.why">Why Ride View</a>
       <a href="#use-cases" data-i18n="nav.useCases">Use cases</a>
     </nav>
     <div class="header-actions">
@@ -75,11 +85,11 @@
       <div class="hero-rule reveal"></div>
       <p class="hero-sub reveal" data-i18n-html="hero.sub">Captive. Measurable. <span class="brand-text">Always in motion.</span></p>
       <div class="hero-cta reveal">
-        <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Partner with RideView</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Partner with Ride View</a>
         <a href="#solution" class="btn btn-ghost" data-i18n="hero.ctaSecondary">See how it works</a>
       </div>
     </div>
-    <div class="hero-strip" data-i18n="hero.strip">RideView — WHERE MOVEMENT MEETS MEANING.</div>
+    <div class="hero-strip" data-i18n="hero.strip">RIDE VIEW — WHERE MOVEMENT MEETS MEANING.</div>
   </section>
 
   <!-- ============ PROBLEM ============ -->
@@ -138,8 +148,8 @@
   <section class="section" id="solution">
     <div class="container">
       <span class="eyebrow reveal" data-i18n="solution.eyebrow">The Solution</span>
-      <h2 class="section-title reveal" data-i18n-html="solution.title">Introducing <span class="brand-text">RideView.</span></h2>
-      <p class="lead reveal" data-i18n="solution.lead">RideView transforms ride-hailing vehicles into high-impact digital media channels.</p>
+      <h2 class="section-title reveal" data-i18n-html="solution.title">Introducing <span class="brand-text">Ride View.</span></h2>
+      <p class="lead reveal" data-i18n="solution.lead">Ride View transforms ride-hailing vehicles into high-impact digital media channels.</p>
       <div class="feature-grid">
         <article class="feature-card reveal">
           <div class="feat-ic">▣</div>
@@ -171,7 +181,7 @@
     <div class="container">
       <span class="eyebrow reveal" data-i18n="how.eyebrow">How It Works</span>
       <h2 class="section-title reveal" data-i18n-html="how.title">How It <span class="brand-text">Works.</span></h2>
-      <p class="lead reveal" data-i18n="how.lead">RideView connects brands with passengers in real time through a simple, powerful process.</p>
+      <p class="lead reveal" data-i18n="how.lead">Ride View connects brands with passengers in real time through a simple, powerful process.</p>
       <ol class="steps">
         <li class="step reveal"><span class="step-num">1</span><h3 data-i18n="how.s1.h">Tablets in Ride Vehicles</h3><p data-i18n="how.s1.p">High-quality screens installed on headrests across partner Uber and Lyft vehicles.</p></li>
         <li class="step reveal"><span class="step-num">2</span><h3 data-i18n="how.s2.h">Ads Shown During Trips</h3><p data-i18n="how.s2.p">Dynamic ads are displayed to engaged passengers during their entire ride.</p></li>
@@ -192,7 +202,7 @@
       <div class="split-text">
         <span class="eyebrow reveal" data-i18n="games.eyebrow">Interactive Experiences</span>
         <h2 class="section-title reveal" data-i18n-html="games.title">Engagement, <span class="brand-text">not just exposure.</span></h2>
-        <p class="lead reveal" data-i18n="games.lead">Passengers don't just watch — they play. RideView turns the screen into an interactive playground, so brands can capture active attention, not just impressions. Every tap is a moment of connection and a new data point.</p>
+        <p class="lead reveal" data-i18n="games.lead">Passengers don't just watch — they play. Ride View turns the screen into an interactive playground, so brands can capture active attention, not just impressions. Every tap is a moment of connection and a new data point.</p>
         <div class="games-grid reveal">
           <div class="game-type"><span class="gt-ic">❔</span><h3 data-i18n="games.g1.h">Branded Trivia &amp; Quizzes</h3><p data-i18n="games.g1.p">Sponsored quizzes tied to a campaign that reward knowledge and keep passengers engaged.</p></div>
           <div class="game-type"><span class="gt-ic">◉</span><h3 data-i18n="games.g2.h">Spin-to-Win &amp; Rewards</h3><p data-i18n="games.g2.p">Prize wheels, scratch cards, and instant offers that drive action before the ride ends.</p></div>
@@ -209,7 +219,7 @@
     <div class="container">
       <span class="eyebrow reveal" data-i18n="measure.eyebrow">Measurement Advantage</span>
       <h2 class="section-title reveal" data-i18n-html="measure.title">Built for <span class="brand-text">Accountability.</span></h2>
-      <p class="lead reveal" data-i18n="measure.lead">RideView provides real-time, movement-based data so brands know exactly how their ads perform.</p>
+      <p class="lead reveal" data-i18n="measure.lead">Ride View provides real-time, movement-based data so brands know exactly how their ads perform.</p>
       <div class="measure-grid">
         <div class="measure-item reveal"><h3 data-i18n="measure.m1.h">Distance-Based Impressions</h3><p data-i18n="measure.m1.p">Impressions calculated on actual distance traveled, not estimates.</p></div>
         <div class="measure-item reveal"><h3 data-i18n="measure.m2.h">Unique Ride Exposure</h3><p data-i18n="measure.m2.p">Track the number of unique passengers who saw your ads.</p></div>
@@ -226,13 +236,13 @@
   <!-- ============ WHY / COMPARISON ============ -->
   <section class="section section-alt" id="why">
     <div class="container">
-      <span class="eyebrow reveal" data-i18n="why.eyebrow">Why RideView</span>
+      <span class="eyebrow reveal" data-i18n="why.eyebrow">Why Ride View</span>
       <h2 class="section-title reveal" data-i18n-html="why.title">A New Media Category<br>That <span class="brand-text">Outperforms.</span></h2>
-      <p class="lead reveal" data-i18n="why.lead">RideView combines the best of OOH and digital — with unmatched attention and measurable results.</p>
+      <p class="lead reveal" data-i18n="why.lead">Ride View combines the best of OOH and digital — with unmatched attention and measurable results.</p>
       <div class="table-wrap reveal">
         <table class="compare">
           <thead>
-            <tr><th data-i18n="why.th.feature">Feature</th><th data-i18n-html="why.th.ooh">OOH<span>Outdoor</span></th><th data-i18n-html="why.th.mobile">Mobile Ads<span>Digital</span></th><th class="rv" data-i18n-html="why.th.rv">RideView<span>In-Ride</span></th></tr>
+            <tr><th data-i18n="why.th.feature">Feature</th><th data-i18n-html="why.th.ooh">OOH<span>Outdoor</span></th><th data-i18n-html="why.th.mobile">Mobile Ads<span>Digital</span></th><th class="rv" data-i18n-html="why.th.rv">Ride View<span>In-Ride</span></th></tr>
           </thead>
           <tbody>
             <tr><td data-i18n="why.r1.label">Audience Attention</td><td><span class="dot low"></span><span data-i18n="why.lvl.low">Low</span></td><td><span class="dot low"></span><span data-i18n="why.lvl.low">Low</span></td><td class="rv"><span class="dot high"></span><span data-i18n="why.lvl.high">High</span></td></tr>
@@ -244,7 +254,7 @@
           </tbody>
         </table>
       </div>
-      <p class="banner-line reveal" data-i18n-html="why.banner">RideView sits at the intersection of <span class="brand-text">attention, relevance, and accountability.</span></p>
+      <p class="banner-line reveal" data-i18n-html="why.banner">Ride View sits at the intersection of <span class="brand-text">attention, relevance, and accountability.</span></p>
     </div>
   </section>
 
@@ -253,7 +263,7 @@
     <div class="container">
       <span class="eyebrow reveal" data-i18n="useCases.eyebrow">Use Cases</span>
       <h2 class="section-title reveal" data-i18n-html="useCases.title">Built for <span class="brand-text">Modern Brands.</span></h2>
-      <p class="lead reveal" data-i18n="useCases.lead">RideView helps brands reach the right people, in the right place, at the right moment — when attention is undivided.</p>
+      <p class="lead reveal" data-i18n="useCases.lead">Ride View helps brands reach the right people, in the right place, at the right moment — when attention is undivided.</p>
       <div class="usecase-grid">
         <article class="usecase reveal"><h3 data-i18n="useCases.u1.h">Automotive Launches</h3><p data-i18n="useCases.u1.p">Build awareness and drive consideration for new models among high-intent audiences in key locations.</p></article>
         <article class="usecase reveal"><h3 data-i18n="useCases.u2.h">Real Estate &amp; Property</h3><p data-i18n="useCases.u2.p">Target potential buyers and renters in relevant areas, driving footfall and inquiries with precision.</p></article>
@@ -289,7 +299,7 @@
     <div class="cta-overlay"></div>
     <div class="container cta-content">
       <h2 class="cta-title reveal" data-i18n-html="cta.title">Let's Move<br><span class="brand-text">Your Brand Forward.</span></h2>
-      <p class="lead reveal" data-i18n="cta.lead">Partner with RideView to turn every ride into measurable brand momentum.</p>
+      <p class="lead reveal" data-i18n="cta.lead">Partner with Ride View to turn every ride into measurable brand momentum.</p>
       <!-- Submits to our own backend (see /server). The honeypot field _gotcha is hidden from humans. -->
       <form class="cta-form reveal" id="partnerForm" method="POST">
         <input type="text" name="name" data-i18n-attr="placeholder:cta.name;aria-label:cta.name" placeholder="Your name" aria-label="Your name" required />
@@ -308,17 +318,21 @@
 <footer class="site-footer">
   <div class="container footer-inner">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <a href="#top" class="logo" aria-label="Ride View home">
       <img class="logo-img logo-img--dark" src="assets/img/logo-dark.png" alt="Ride View" width="150" height="36" />
       <img class="logo-img logo-img--light" src="assets/img/logo-white.png" alt="Ride View" width="150" height="36" />
 =======
     <a href="#top" class="logo" aria-label="RideView home">
+=======
+    <a href="#top" class="logo" aria-label="Ride View home">
+>>>>>>> c959167 (Same-origin API wiring, form fixes, two-email flow, new logo)
       <img class="logo-img logo-img-dark" src="assets/img/logo-dark.png" width="640" height="144" alt="" loading="lazy" />
       <img class="logo-img logo-img-light" src="assets/img/logo-white.png" width="640" height="142" alt="" loading="lazy" />
 >>>>>>> 67a1816 (form fix, logo and new pics)
     </a>
     <p class="footer-tag" data-i18n="footer.tag">Where movement meets meaning.</p>
-    <p class="footer-copy">© <span id="year"></span> <span data-i18n="footer.copy">RideView. All rights reserved.</span></p>
+    <p class="footer-copy">© <span id="year"></span> <span data-i18n="footer.copy">Ride View. All rights reserved.</span></p>
   </div>
 </footer>
 
