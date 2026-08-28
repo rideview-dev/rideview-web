@@ -20,7 +20,7 @@
      form then posts to the same origin, which is the normal setup.
      Set it to the API's origin (e.g. "https://api.rideview.ca") only when the
      static files are hosted separately from the backend. It must be https. -->
-<meta name="rideview-api" content="" />
+<meta name="rideview-api" content="https://api.rideview.ca" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon.png" />
@@ -31,19 +31,9 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="header">
   <div class="container header-inner">
-<<<<<<< HEAD
-<<<<<<< HEAD
     <a href="#top" class="logo" aria-label="Ride View home">
-      <img class="logo-img logo-img--dark" src="assets/img/logo-dark.png" alt="Ride View" width="150" height="36" />
-      <img class="logo-img logo-img--light" src="assets/img/logo-white.png" alt="Ride View" width="150" height="36" />
-=======
-    <a href="#top" class="logo" aria-label="RideView home">
-=======
-    <a href="#top" class="logo" aria-label="Ride View home">
->>>>>>> c959167 (Same-origin API wiring, form fixes, two-email flow, new logo)
       <img class="logo-img logo-img-dark" src="assets/img/logo-dark.png" width="640" height="144" alt="" fetchpriority="high" />
       <img class="logo-img logo-img-light" src="assets/img/logo-white.png" width="640" height="142" alt="" />
->>>>>>> 67a1816 (form fix, logo and new pics)
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="#problem" data-i18n="nav.problem">Problem</a>
@@ -99,22 +89,22 @@
       <h2 class="section-title reveal" data-i18n-html="problem.title">Attention is <span class="brand-text">harder than ever.</span></h2>
       <div class="problem-grid">
         <article class="problem-card reveal">
-          <div class="ic">⏭</div>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5l9 7-9 7V5z"/><path d="M19 5v14"/></svg></div>
           <h3 data-i18n="problem.c1.h">Consumers skip, block, or ignore ads</h3>
           <p data-i18n="problem.c1.p">Traditional digital ads are losing impact.</p>
         </article>
         <article class="problem-card reveal">
-          <div class="ic">▭</div>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="10" rx="1.5"/><path d="M8 14l-1 6M16 14l1 6"/></svg></div>
           <h3 data-i18n="problem.c2.h">Static OOH lacks precision &amp; measurement</h3>
           <p data-i18n="problem.c2.p">Hard to target, harder to track.</p>
         </article>
         <article class="problem-card reveal">
-          <div class="ic">▢</div>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M9.5 7h5M9.5 10h5M9.5 13h5"/></svg></div>
           <h3 data-i18n="problem.c3.h">Mobile ads are saturated and expensive</h3>
           <p data-i18n="problem.c3.p">Rising costs, declining attention.</p>
         </article>
         <article class="problem-card reveal">
-          <div class="ic">◌</div>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg></div>
           <h3 data-i18n="problem.c4.h">Brands struggle to reach the right moment</h3>
           <p data-i18n="problem.c4.p">Timing and context are everything.</p>
         </article>
@@ -152,22 +142,22 @@
       <p class="lead reveal" data-i18n="solution.lead">Ride View transforms ride-hailing vehicles into high-impact digital media channels.</p>
       <div class="feature-grid">
         <article class="feature-card reveal">
-          <div class="feat-ic">▣</div>
+          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
           <h3 data-i18n="solution.f1.h">Premium In-Ride Screens</h3>
           <p data-i18n="solution.f1.p">High-visibility tablet placements in the back of every ride.</p>
         </article>
         <article class="feature-card reveal">
-          <div class="feat-ic">◎</div>
+          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg></div>
           <h3 data-i18n="solution.f2.h">Smart Targeting</h3>
           <p data-i18n="solution.f2.p">Geo-target by city, zones, routes and high-traffic areas.</p>
         </article>
         <article class="feature-card reveal">
-          <div class="feat-ic">▤</div>
+          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M7 20v-5M12 20V9M17 20v-8"/></svg></div>
           <h3 data-i18n="solution.f3.h">Measurable Impact</h3>
           <p data-i18n="solution.f3.p">Real-time tracking delivers actionable insights that prove performance.</p>
         </article>
         <article class="feature-card reveal">
-          <div class="feat-ic">◉</div>
+          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5l5.5 14 2-5.5 5.5-2L5 5z"/><path d="M14 14l4.5 4.5"/></svg></div>
           <h3 data-i18n="solution.f4.h">Interactive Experiences</h3>
           <p data-i18n="solution.f4.p">In-ride games and playable ads turn idle time into active brand engagement.</p>
         </article>
@@ -204,10 +194,10 @@
         <h2 class="section-title reveal" data-i18n-html="games.title">Engagement, <span class="brand-text">not just exposure.</span></h2>
         <p class="lead reveal" data-i18n="games.lead">Passengers don't just watch — they play. Ride View turns the screen into an interactive playground, so brands can capture active attention, not just impressions. Every tap is a moment of connection and a new data point.</p>
         <div class="games-grid reveal">
-          <div class="game-type"><span class="gt-ic">❔</span><h3 data-i18n="games.g1.h">Branded Trivia &amp; Quizzes</h3><p data-i18n="games.g1.p">Sponsored quizzes tied to a campaign that reward knowledge and keep passengers engaged.</p></div>
-          <div class="game-type"><span class="gt-ic">◉</span><h3 data-i18n="games.g2.h">Spin-to-Win &amp; Rewards</h3><p data-i18n="games.g2.p">Prize wheels, scratch cards, and instant offers that drive action before the ride ends.</p></div>
-          <div class="game-type"><span class="gt-ic">▹</span><h3 data-i18n="games.g3.h">Casual Mini-Games</h3><p data-i18n="games.g3.p">Quick, branded arcade-style games that make the wait fun and memorable.</p></div>
-          <div class="game-type"><span class="gt-ic">▤</span><h3 data-i18n="games.g4.h">Interactive Ads &amp; Polls</h3><p data-i18n="games.g4.p">Playable ad units, polls, and surveys that invite passengers to interact and respond.</p></div>
+          <div class="game-type"><span class="gt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.8 9.4a2.3 2.3 0 1 1 3.1 2.2c-.6.3-.9.8-.9 1.4v.4"/><path d="M12 17h.01"/></svg></span><h3 data-i18n="games.g1.h">Branded Trivia &amp; Quizzes</h3><p data-i18n="games.g1.p">Sponsored quizzes tied to a campaign that reward knowledge and keep passengers engaged.</p></div>
+          <div class="game-type"><span class="gt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17M3.5 12h17M6 6l12 12M18 6L6 18"/></svg></span><h3 data-i18n="games.g2.h">Spin-to-Win &amp; Rewards</h3><p data-i18n="games.g2.p">Prize wheels, scratch cards, and instant offers that drive action before the ride ends.</p></div>
+          <div class="game-type"><span class="gt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="4"/><path d="M7 11h4M9 9v4"/><circle cx="15.5" cy="10.5" r="1"/><circle cx="17.5" cy="13.5" r="1"/></svg></span><h3 data-i18n="games.g3.h">Casual Mini-Games</h3><p data-i18n="games.g3.p">Quick, branded arcade-style games that make the wait fun and memorable.</p></div>
+          <div class="game-type"><span class="gt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6h14M5 12h9M5 18h5"/></svg></span><h3 data-i18n="games.g4.h">Interactive Ads &amp; Polls</h3><p data-i18n="games.g4.p">Playable ad units, polls, and surveys that invite passengers to interact and respond.</p></div>
         </div>
         <p class="banner-line reveal" data-i18n-html="games.banner">More play means <span class="brand-text">more time, more attention, more data.</span></p>
       </div>
@@ -317,19 +307,9 @@
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="container footer-inner">
-<<<<<<< HEAD
-<<<<<<< HEAD
     <a href="#top" class="logo" aria-label="Ride View home">
-      <img class="logo-img logo-img--dark" src="assets/img/logo-dark.png" alt="Ride View" width="150" height="36" />
-      <img class="logo-img logo-img--light" src="assets/img/logo-white.png" alt="Ride View" width="150" height="36" />
-=======
-    <a href="#top" class="logo" aria-label="RideView home">
-=======
-    <a href="#top" class="logo" aria-label="Ride View home">
->>>>>>> c959167 (Same-origin API wiring, form fixes, two-email flow, new logo)
       <img class="logo-img logo-img-dark" src="assets/img/logo-dark.png" width="640" height="144" alt="" loading="lazy" />
       <img class="logo-img logo-img-light" src="assets/img/logo-white.png" width="640" height="142" alt="" loading="lazy" />
->>>>>>> 67a1816 (form fix, logo and new pics)
     </a>
     <p class="footer-tag" data-i18n="footer.tag">Where movement meets meaning.</p>
     <p class="footer-copy">© <span id="year"></span> <span data-i18n="footer.copy">Ride View. All rights reserved.</span></p>

@@ -1,5 +1,5 @@
 /* ============================================================
-   RIDEVIEW — brand: dark navy + electric blue
+   RIDE VIEW — brand: dark navy + electric blue
    ============================================================ */
 :root {
   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -90,14 +90,6 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
 .site-header{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--color-bg) 72%, transparent);border-bottom:1px solid transparent;transition:border-color .3s, background .3s}
 .site-header.scrolled{border-color:var(--color-border);background:color-mix(in srgb,var(--color-bg) 90%, transparent)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:4.75rem;gap:var(--space-6)}
-<<<<<<< HEAD
-.logo{display:flex;align-items:center}
-.logo-img{height:34px;width:auto;display:block;border-radius:8px}
-.logo-img--dark{display:block}
-.logo-img--light{display:none}
-[data-theme="light"] .logo-img--dark{display:none}
-[data-theme="light"] .logo-img--light{display:block}
-=======
 /* Brand lockup. Two artwork files, one per theme: the light-on-dark version for
    the dark theme, the dark-on-light version for the light theme. Both are always
    in the DOM and CSS picks one, so switching themes never reloads an image. The
@@ -107,7 +99,6 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
 [data-theme="dark"] .logo-img-light{display:none}
 [data-theme="light"] .logo-img-dark{display:none}
 .site-footer .logo-img{height:2.6rem}
->>>>>>> 67a1816 (form fix, logo and new pics)
 .nav{display:flex;gap:var(--space-6);font-size:var(--text-sm);font-weight:500}
 .nav a{position:relative;color:var(--color-text-muted);padding-block:.35rem}
 .nav a:hover{color:var(--color-text)}
@@ -148,6 +139,7 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
 .problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--space-5)}
 .problem-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-8)}
 .problem-card .ic{width:48px;height:48px;border-radius:var(--radius-full);border:1.5px solid var(--brand);color:var(--brand-2);display:grid;place-items:center;font-size:1.4rem;margin-bottom:var(--space-5)}
+.problem-card .ic svg{width:24px;height:24px}
 [data-theme="light"] .problem-card .ic{color:var(--brand)}
 .problem-card h3{font-size:var(--text-lg);margin-bottom:var(--space-2)}
 .problem-card p{font-size:var(--text-sm);color:var(--color-text-muted)}
@@ -169,6 +161,7 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
 .game-type{padding:var(--space-5);border-radius:var(--radius-md);background:var(--color-surface);border:1px solid var(--color-border);transition:transform var(--transition-interactive),border-color var(--transition-interactive)}
 .game-type:hover{transform:translateY(-4px);border-color:var(--brand)}
 .gt-ic{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:var(--radius-sm);background:rgba(47,107,255,.12);color:var(--brand-2);font-size:1.25rem;margin-bottom:var(--space-3)}
+.gt-ic svg{width:22px;height:22px}
 [data-theme="light"] .gt-ic{color:var(--brand)}
 .game-type h3{font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2)}
 .game-type p{font-size:var(--text-sm);color:var(--color-text-muted)}
@@ -179,6 +172,7 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
 .feature-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-10);transition:transform var(--transition-interactive),border-color var(--transition-interactive)}
 .feature-card:hover{transform:translateY(-6px);border-color:var(--brand)}
 .feat-ic{width:56px;height:56px;border-radius:var(--radius-md);background:rgba(47,107,255,.12);color:var(--brand-2);display:grid;place-items:center;font-size:1.6rem;margin-bottom:var(--space-6)}
+.feat-ic svg{width:28px;height:28px}
 [data-theme="light"] .feat-ic{color:var(--brand)}
 .feature-card h3{font-size:var(--text-lg);margin-bottom:var(--space-3)}
 .feature-card p{color:var(--color-text-muted)}
@@ -277,7 +271,7 @@ a,button,input{transition:color var(--transition-interactive),background var(--t
    automatically; these rules handle the few physical-direction cases.
    ============================================================ */
 [dir="rtl"]{
-  /* Use an Arabic-tuned face for body + display copy. "RideView" stays Latin. */
+  /* Use an Arabic-tuned face for body + display copy. "Ride View" stays Latin. */
   --font-body:'IBM Plex Sans Arabic','Satoshi',system-ui,sans-serif;
   --font-display:'IBM Plex Sans Arabic','Clash Display','Satoshi',system-ui,sans-serif;
 }

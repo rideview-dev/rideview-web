@@ -206,11 +206,15 @@
   const RAW = '__PORT_8000__';
   const META = (document.querySelector('meta[name="rideview-api"]') || {}).content || '';
   const API = (function () {
-    if (META.trim()) return META.trim().replace(/\/+$/, '');
-    if (!RAW.startsWith('__')) return RAW.replace(/\/+$/, '');
     var loc = window.location;
-    if (loc.protocol === 'file:') return 'http://localhost:8000';
     var isLocalHost = loc.hostname === 'localhost' || loc.hostname === '127.0.0.1';
+    var isLocalPage = isLocalHost || loc.protocol === 'file:';
+    // The meta tag carries the PRODUCTION API origin, so it is deliberately
+    // ignored on localhost and file:// — otherwise testing the form on your own
+    // machine would post real leads into the live database and email the team.
+    if (META.trim() && !isLocalPage) return META.trim().replace(/\/+$/, '');
+    if (!RAW.startsWith('__')) return RAW.replace(/\/+$/, '');
+    if (loc.protocol === 'file:') return 'http://localhost:8000';
     // Ports commonly used by static dev servers (Live Server, Vite, http.server…).
     var STATIC_DEV_PORTS = ['3000', '4173', '5000', '5173', '5500', '8080'];
     if (isLocalHost && STATIC_DEV_PORTS.indexOf(loc.port) !== -1) {
